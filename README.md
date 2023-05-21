@@ -2,5 +2,5 @@
 Thành viên nhóm:
 - Hàn Hoàng Hà
 - Trần Minh Ngọc
-- Nguyễn Duy Hoàng (nhóm trưởng)
+- Nguyễn Duy Hoàng 
 - Phạm Khánh Duy 
