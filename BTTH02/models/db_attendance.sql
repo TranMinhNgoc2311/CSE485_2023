@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th5 20, 2023 lúc 06:54 PM
+-- Thời gian đã tạo: Th5 22, 2023 lúc 09:54 AM
 -- Phiên bản máy phục vụ: 10.4.28-MariaDB
 -- Phiên bản PHP: 8.2.4
 
@@ -39,10 +39,10 @@ CREATE TABLE `attendance` (
 --
 
 INSERT INTO `attendance` (`attendance_Date`, `id_Class`, `id_Student`, `status`) VALUES
-('2023-05-19', 'cse1', '1a', 'Co mat'),
-('2023-05-20', 'cse1', '1a', 'Vang mat'),
-('2023-05-21', 'cse2', '2b', 'Co mat'),
-('2023-05-22', 'cse2', '2b', 'Co mat');
+('2023-05-19', 'cse1', '205106325', 'Co mat'),
+('2023-05-20', 'cse1', '205106325', 'Vang mat'),
+('2023-05-21', 'cse2', '205106659', 'Co mat'),
+('2023-05-22', 'cse2', '205106659', 'Co mat');
 
 -- --------------------------------------------------------
 
@@ -61,8 +61,8 @@ CREATE TABLE `class` (
 --
 
 INSERT INTO `class` (`id_Class`, `id_Course`, `id_Lecturer`) VALUES
-('cse1', 'cse486', '123'),
-('cse2', 'cse123', '345');
+('cse1', '1', '123'),
+('cse2', '2', '345');
 
 -- --------------------------------------------------------
 
@@ -80,8 +80,8 @@ CREATE TABLE `class_student` (
 --
 
 INSERT INTO `class_student` (`id_Class`, `id_Student`) VALUES
-('cse1', '2b'),
-('cse2', '1a');
+('cse1', '205106325'),
+('cse2', '205106659');
 
 -- --------------------------------------------------------
 
@@ -100,8 +100,8 @@ CREATE TABLE `course` (
 --
 
 INSERT INTO `course` (`id_Course`, `id_Lecturer`, `name`) VALUES
-('cse123', '345', 'Lap trinh c#'),
-('cse486', '123', 'Lap trinh web');
+('2', '345', 'Lap trinh winform '),
+('1', '123', 'Lap trinh cong nghe web');
 
 -- --------------------------------------------------------
 
@@ -120,8 +120,8 @@ CREATE TABLE `lecturer` (
 --
 
 INSERT INTO `lecturer` (`id_Lecturer`, `full_Name`, `user_Name`) VALUES
-('123', 'Tran Van A', 'tranvana@gmail.com'),
-('345', 'Tran Van B', 'tranvanb@gmail.com');
+('123', 'Kiều Tuấn Dũng', 'dungkt@gmail.com'),
+('345', 'Nguyễn Văn Nam', 'namvn@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -142,8 +142,8 @@ CREATE TABLE `student` (
 --
 
 INSERT INTO `student` (`id_Student`, `full_Name`, `birth_Day`, `address`, `user_Name`) VALUES
-('1a', 'Nguyen Van A', '2002-05-21', 'Ha Noi', 'nguyenvana@gmail.com'),
-('2b', 'Nguyen Van B', '2001-09-20', 'Ha Noi', 'nguyenvanb@gmail.com');
+('205106325', 'Nguyen Van A', '2002-05-21', 'Ha Noi', 'nguyenvana@gmail.com'),
+('205106659', 'Nguyen Van B', '2001-09-20', 'Ha Noi', 'nguyenvanb@gmail.com');
 
 -- --------------------------------------------------------
 
@@ -163,10 +163,10 @@ CREATE TABLE `user` (
 --
 
 INSERT INTO `user` (`id_User`, `user_Name`, `password`, `role`) VALUES
-('s1a', 'nguyenvana@gmail.com', '123456', '1'),
-('s2b', 'nguyenvanb@gmail.com', '123456', '1'),
-('a123', 'tranvana@gmail.com', '123456', '0'),
-('a345', 'tranvanb@gmail.com', '123456', '0');
+('u1', 'nguyenvana@gmail.com', '123456', '1'),
+('u2', 'nguyenvanb@gmail.com', '123456', '1'),
+('a1', 'dungkt@gmail.com', '123456', '0'),
+('a2', 'namvn@gmail.com', '123456', '0');
 
 --
 -- Chỉ mục cho các bảng đã đổ
